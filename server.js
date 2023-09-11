@@ -17,7 +17,7 @@ app.get('/api', async(req, res) => {
    res.status(200).json({
       slack_name,
       current_day: weekday[new Date().getDay()],
-      utc_time: new Date(),
+      utc_time: new Date().toISOString().replace(/\.\d+/, '').replace(/(\d{2}:\d{2}:\d{2})Z$/, '$1.00Z'),
       track,
       github_file_url: "https://github.com/oluwaseun-odueso/HNGX/blob/main/server.js",
       github_repo_url: "https://github.com/oluwaseun-odueso/HNGX",
