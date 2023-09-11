@@ -6,7 +6,7 @@ app.use(express.json())
 
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"];
 
-app.get('/hng', async(req, res) => {
+app.get('/api', async(req, res) => {
    let slack_name = req.query.slack_name
    let track = req.query.track
 
