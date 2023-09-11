@@ -1,7 +1,11 @@
 const express = require('express')
+const cors = require("cors")
 const port = 4000
 
 const app = express();
+app.use(cors({
+   origin: "*"
+}))
 app.use(express.json())
 
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"];
